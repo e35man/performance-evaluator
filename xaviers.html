@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xavier's self-desk</title>
+    <link rel="stylesheet" href="styleXaviers.css"/>
+    <script src="scriptXaviers.js"></script>
+</head>
+<body>
+    <div class="header">
+        <img src="stxavierslogo.jpg" alt="st xaviers logo" width="50px" height="50px" border-radius="200px">
+        <h1 style="text-align:center; color: white;">Student Performance Calculator</h1>
+    </div>
+    <div class="calculator">
+        <div class="partition">
+            <label class="label">Enter your ECC points: <input type="number" min="0" max="20" id="collectedPoints"></label>
+            <label class="label">Enter required points: <input type="number" min="0" max="20" id="totalPoints"></label>
+            <input type="button" value="Submit" onclick="showECC()">
+            <span id="ecc"></span>
+        </div>
+        <div class="partition">
+            <label class="label">Enter attended lectures: <input type="number" min="0" max="100" id="attendedLecs"></label>
+            <label class="label">Enter conducted lectures: <input type="number" min="0" max="100" id="totalLecs"></label>
+            <input type="button" value="Submit" onclick="showAttendence()">
+            <span id="attendencePercent"></span>
+        </div>
+        
+        <div class="partition">
+            <label class="label">Odd Semester SGPA: <input type="number" min="0" max="10" id="oddSGPA"></label>
+            <label class="label">Even Semester SGPA: <input type="number" min="0" max="10" id="evenSGPA"></label>
+            <input type="button" value="Submit" onclick="showCGPA()">
+            <span id="CGPA"></span>
+        </div>
+    </div><br><br>
+    <div class="summary">
+            <input type="button" value="Generate Summary" onclick="showSummary()">
+            <span id="summary"></span>
+    </div>
+
+</body>
+</html>
